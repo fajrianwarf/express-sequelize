@@ -1,0 +1,18 @@
+import express from "express";
+import db from "./config/database.js";
+import productRoutes from './routes/index.js'
+
+const port = 3000;
+const app = express()
+
+try {
+    await db.authenticate();
+    console.log('database connected...');
+} catch (error) {
+    console.log(`Connection error : ${err}`);
+}
+
+app.use(express.json());
+app.use('/products', productRoutes);
+
+app.listen(port, () => console.log(`Server running on ${port}`))
