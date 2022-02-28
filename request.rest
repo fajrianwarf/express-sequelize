@@ -1,0 +1,29 @@
+GET http://localhost:3000/products
+
+###
+GET http://localhost:3000/products/1
+
+###
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Printer A3 EPSON",
+    "price": 1300000,
+    "stock": 4,
+    "status": 1
+}
+
+###
+PATCH http://localhost:3000/products/3
+Content-Type: application/json
+
+{
+    "name": "Printer A45 EPSON",
+    "price": 1300000,
+    "stock": 4,
+    "status": 1
+}
+
+###
+DELETE  http://localhost:3000/products/25

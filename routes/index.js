@@ -1,9 +1,12 @@
 import express from "express";
-import { add, index } from "../controllers/products.js";
+import { index, findOneId, addProduct, updateProduct, deleteProduct } from "../controllers/products.js";
 
 const router = express.Router();
 
 router.get('/', index );
-router.post('/', add );
+router.get('/:id', findOneId );
+router.post('/', addProduct );
+router.patch('/:id', updateProduct );
+router.delete('/:id', deleteProduct );
 
 export default router;

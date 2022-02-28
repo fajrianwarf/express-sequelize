@@ -6,15 +6,15 @@ const { DataTypes } = Sequelize;
 const Product = db.define('products', {
     name: {
         type: DataTypes.STRING,
-        // allowNull: false
+        allowNull: false
     },
     price: {
         type: DataTypes.INTEGER,
-        // allowNull: false
+        allowNull: false
     },
     stock: {
         type: DataTypes.INTEGER,
-        // allowNull: false
+        allowNull: false
     },
     status: {
         type: DataTypes.INTEGER,
